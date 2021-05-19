@@ -3,6 +3,7 @@ services:
   cc-db:
     container_name: cc-mysql-db
     image: mysql:5.7
+    platform: linux/amd64
     restart: always
     command: --sql_mode="NO_ENGINE_SUBSTITUTION"
     environment:
