@@ -1,0 +1,8 @@
+# MySQL Management
+
+- make db-start                Start a local MySQL instance on Docker
+- make db-init                 Initialize local MySQL Db and run migrations
+- make db-wipe                 Clear data stored on Local MySQL database
+
+# Environment Variable Management
+- make switch-env              Switch between production and development environment variables
