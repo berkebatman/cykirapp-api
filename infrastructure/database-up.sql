@@ -117,3 +117,17 @@ CREATE TABLE user_payments(
   	transaction_ref VARCHAR(200),
   	FOREIGN KEY (user_id) REFERENCES users(user_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS blogs;
+CREATE TABLE blogs(
+    blog_id INT AUTO_INCREMENT PRIMARY KEY, 
+    user_id int NOT NULL, 
+    `description` VARCHAR(300),
+    `image`  VARCHAR(250),
+    slug VARCHAR(100) NOT NULL, 
+    title VARCHAR(200) NOT NULL,
+    blog_content LONGTEXT,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    published_at DATETIME,
+    FOREIGN KEY (user_id) REFERENCES users (user_id)
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
