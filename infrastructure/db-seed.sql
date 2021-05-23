@@ -23,22 +23,22 @@ VALUES ("4","Feriha", "Garacocco" ,"2020-11-20","garacoco@gmail.com", 123456, "O
 INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number, user_rating_id)
 VALUES ("5","Lefkeli", "Ganayakz" ,"2020-11-20","admin@cycodes.com", 123456, "Lefke", "Iskele", 05488888888, 5);
 
-INSERT INTO product_categories (category_id, category_name)
-VALUES ("1", "Musical Instruments");
-INSERT INTO product_categories (category_id, category_name)
-VALUES ("2", "Film and Photography");
-INSERT INTO product_categories (category_id, category_name)
-VALUES ("3", "Electronics");
-INSERT INTO product_categories (category_id, category_name)
-VALUES ("4", "Transport");
-INSERT INTO product_categories (category_id, category_name)
-VALUES ("5", "Holiday and Travel");
-INSERT INTO product_categories (category_id, category_name)
-VALUES ("6","Home, office and Gardening" );
-INSERT INTO product_categories (category_id, category_name)
-VALUES ("7", "Sports Equipment");
-INSERT INTO product_categories (category_id, category_name)
-VALUES ("8", "Storage");
+INSERT INTO product_categories (category_id, category_name, category_image)
+VALUES ("1", "Musical Instruments", "../assets/images/gitar.png");
+INSERT INTO product_categories (category_id, category_name, category_image)
+VALUES ("2", "Film and Photography", "../assets/images/kamera.png");
+INSERT INTO product_categories (category_id, category_name, category_image)
+VALUES ("3", "Electronics", "../assets/images/iphone.png");
+INSERT INTO product_categories (category_id, category_name, category_image)
+VALUES ("4", "Transport", "../assets/images/bike.png");
+INSERT INTO product_categories (category_id, category_name, category_image)
+VALUES ("5", "Holiday and Travel", "../assets/images/tent.png");
+INSERT INTO product_categories (category_id, category_name, category_image)
+VALUES ("6","Home, office and Gardening", "../assets/images/printer.png");
+INSERT INTO product_categories (category_id, category_name, category_image)
+VALUES ("7", "Sports Equipment", "../assets/images/football.png");
+INSERT INTO product_categories (category_id, category_name, category_image)
+VALUES ("8", "Storage", "../assets/images/storage.png");
 
 INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
 VALUES ("1", "Gibson Les Paul", 100, "../assets/images/gitar.png", "2021-5-20 12:00:00", 3, True, 1, 1);

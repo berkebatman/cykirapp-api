@@ -78,6 +78,7 @@ CREATE TABLE products(
 DROP TABLE IF EXISTS product_categories;
 CREATE TABLE product_categories(
     category_id int AUTO_INCREMENT PRIMARY KEY,
+    category_image VARCHAR(250),
     category_name VARCHAR(100)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
