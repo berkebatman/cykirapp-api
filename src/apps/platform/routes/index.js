@@ -3,6 +3,7 @@ const express = require("express");
 const getProducts = require("../controllers/products/getProducts");
 const getCategories = require("../controllers/categories/getCategories");
 const getUsers = require("../controllers/users/getUsers");
+const postUser = require("../controllers/users/register");
 const getBlogs = require("../controllers/blogs/gelBlogs");
 const postBlog = require("../controllers/blogs/postBlog");
 
@@ -16,6 +17,9 @@ router.get("/categories", getCategories);
 
 // users
 router.get("/users", getUsers);
+
+// user management
+router.post("/register", postUser);
 
 // blogs
 router.get("/blogs", getBlogs);
