@@ -106,3 +106,17 @@ VALUES ("4", 2, 4);
 INSERT INTO order_lines (order_line_id, product_id, order_id)
 VALUES ("5", 5, 2);
 
+INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
+VALUES (1, "The perception of space and how people can adopt a life in outerspace ","to-brighter-futures", "To Brigther Futures", "1Content goes here, if you are interested you will need to sort out the markdown render:p", "2021-04-02 09:00:00");
+INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
+VALUES (2, "Dont panic! This will be the best read of the year","till-dawn", "Difference between Vampires and Developers", " some Content goes here, if you are interested you will need to sort out the markdown render", "2021-04-10 13:00:00");
+INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
+VALUES (3, "Animal I have become","animal", "imagine all the people dancing and touching each other", " some more Content goes here, if you are interested you will need to sort out the markdown render", "2021-04-11 15:00:00");
+INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
+VALUES (4, "My milkshake brings all boys to the yard","hey-you", "Is it me you looking for?", " some Content goes here, if you are interested you will need to sort out the markdown render", "2021-04-10 13:00:00");
+INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
+VALUES (2, "Simple concepts to get your head around with the basics of Js ","javascript-for-beginners", "Javascript for Beginners", "2Content goes here, if you are interested you will need to sort out the markdown render:p","2021-03-02 12:00:00" );
+INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
+VALUES (1, "Simple concepts to get your head around with the basics of Phyton ","phyton-for-beginners", "Phyton for Beginners", "Some content goes here, if you are interested you will need to sort out the markdown render:p","2021-04-01 14:00:00" );
+INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
+VALUES (1, "Theory of human body","why-humans-have-two-ears-but-only-one-mouth", "Why two ears and only 1 mouth?", "3Content goes here, if you are interested you will need to sort out the markdown render:p","2020-11-20 12:00:00");
