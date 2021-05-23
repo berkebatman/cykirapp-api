@@ -24,9 +24,9 @@ INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, passwor
 VALUES ("5","Lefkeli", "Ganayakz" ,"2020-11-20","admin@cycodes.com", 123456, "Lefke", "Iskele", 05488888888, 5);
 
 INSERT INTO product_categories (category_id, category_name, category_image)
-VALUES ("1", "Musical Instruments", "../assets/images/gitar.png");
+VALUES ("1", "Musical Instruments", "../assets/images/guitar.png");
 INSERT INTO product_categories (category_id, category_name, category_image)
-VALUES ("2", "Film and Photography", "../assets/images/kamera.png");
+VALUES ("2", "Film and Photography", "../assets/images/camera.png");
 INSERT INTO product_categories (category_id, category_name, category_image)
 VALUES ("3", "Electronics", "../assets/images/iphone.png");
 INSERT INTO product_categories (category_id, category_name, category_image)
