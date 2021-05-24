@@ -1,6 +1,7 @@
 const express = require("express");
 
 const getProducts = require("../controllers/products/getProducts");
+const getProductsByCategory = require("../controllers/products/getProductsByCategory");
 const getCategories = require("../controllers/categories/getCategories");
 const getUsers = require("../controllers/users/getUsers");
 const postUser = require("../controllers/users/register");
@@ -11,6 +12,7 @@ const router = express.Router();
 
 // products
 router.get("/products", getProducts);
+router.get("/category/:categoryName", getProductsByCategory);
 
 // categories
 router.get("/categories", getCategories);
