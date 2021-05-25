@@ -10,6 +10,8 @@ SELECT
     products.price,
     products.user_id,
     products.listed_at,
+    products.image,
+    products.availability,
     users.first_name,
     users.last_name
 FROM product_categories
