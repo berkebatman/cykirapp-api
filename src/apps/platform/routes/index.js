@@ -7,6 +7,7 @@ const getUsers = require("../controllers/users/getUsers");
 const postUser = require("../controllers/users/register");
 const getBlogs = require("../controllers/blogs/gelBlogs");
 const postBlog = require("../controllers/blogs/postBlog");
+const getBlog = require("../controllers/blogs/getBlog");
 
 const router = express.Router();
 
@@ -26,5 +27,6 @@ router.post("/register", postUser);
 // blogs
 router.get("/blogs", getBlogs);
 router.post("/blog/post", postBlog);
+router.get("/blog/:slug", getBlog);
 
 module.exports = router;
