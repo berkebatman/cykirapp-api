@@ -40,22 +40,22 @@ VALUES ("7", "Sports Equipment", "../assets/images/football.svg");
 INSERT INTO product_categories (category_id, category_name, category_image)
 VALUES ("8", "Storage", "../assets/images/storage.svg");
 
-INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
-VALUES ("1", "Gibson Les Paul", 100, "../assets/images/gitar.png", "2021-5-20 12:00:00", 3, True, 1, 1);
-INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
-VALUES ("2", "Canon Camera Pix S Plus", 40, "../assets/images/kamera.png", "2021-4-20 12:00:00", 4, True, 3, 2);
-INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
-VALUES ("3", "Iphone 12", 75, "../assets/images/iphone.png", "2021-5-22 12:00:00", 5, True, 5, 3);
-INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
-VALUES ("4", "Bike", 40, "../assets/images/bike.png", "2021-5-16 12:00:00", 5, True, 4, 4);
-INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
-VALUES ("5", "Camping tent", 40, "../assets/images/tent.png", "2021-5-14 12:00:00", 5, True, 5, 5);
-INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
-VALUES ("6", "Printer", 40, "../assets/images/printer.png", "2021-5-18 12:00:00", 5, True, 5, 6);
-INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
-VALUES ("7", "Footbal", 40, "../assets/images/football.png", "2021-5-01 12:00:00", 5, True, 5, 7);
-INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, user_id, category_id )
-VALUES ("8", "Storage", 40, "../assets/images/storage.png", "2021-5-04 12:00:00", 5, True, 5, 8);
+INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, product_city, product_town, user_id, category_id )
+VALUES ("1", "Gibson Les Paul", 100, "../assets/images/gitar.png", "2021-5-20 12:00:00", 3, True, "Lefkosa", "Gonyeli", 1, 1);
+INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, product_city, product_town, user_id, category_id )
+VALUES ("2", "Canon Camera Pix S Plus", 40, "../assets/images/kamera.png", "2021-4-20 12:00:00", 4, True, "Girne", "Alsancak", 3, 2);
+INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, product_city, product_town, user_id, category_id )
+VALUES ("3", "Iphone 12", 75, "../assets/images/iphone.png", "2021-5-22 12:00:00", 5, True, "Magusa", "Tuzla", 5, 3);
+INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, product_city, product_town, user_id, category_id )
+VALUES ("4", "Bike", 40, "../assets/images/bike.png", "2021-5-16 12:00:00", 5, True, "Omorfo", "Kalkanli", 4, 4);
+INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, product_city, product_town, user_id, category_id )
+VALUES ("5", "Camping tent", 40, "../assets/images/tent.png", "2021-5-14 12:00:00", 5, True, "Omorfo", "Merkez", 5, 5);
+INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, product_city, product_town, user_id, category_id )
+VALUES ("6", "Printer", 40, "../assets/images/printer.png", "2021-5-18 12:00:00", 5, True, "Girne", "Lapta", 5, 6);
+INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, product_city, product_town,user_id, category_id )
+VALUES ("7", "Footbal", 40, "../assets/images/football.png", "2021-5-01 12:00:00", 5, True, "Lefke", "Yesilirmak", 5, 7);
+INSERT INTO products (product_id, product_name, price, `image`, listed_at, rating, availability, product_city, product_town, user_id, category_id )
+VALUES ("8", "Storage", 40, "../assets/images/storage.png", "2021-5-04 12:00:00", 5, True, "Lefkosa", "Hamitkoy", 5, 8);
 
 INSERT INTO product_ratings (product_rating_id, product_rating, product_id)
 VALUES ("1", 5, 1);

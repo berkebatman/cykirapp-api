@@ -69,6 +69,8 @@ CREATE TABLE products(
     listed_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     rating int, 
     availability BOOLEAN,
+    product_city VARCHAR(250),
+    product_town VARCHAR(250),
     user_id int,
     category_id int,
     FOREIGN KEY (user_id) REFERENCES users(user_id),
