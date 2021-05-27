@@ -1,4 +1,3 @@
-
 const fetchProductsByCategory = require("~root/actions/products/fetchProductsByCategory");
 const handleAPIError = require("~root/utils/handleAPIError");
 
