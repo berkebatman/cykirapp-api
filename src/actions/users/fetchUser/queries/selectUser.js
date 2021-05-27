@@ -1,4 +1,4 @@
-const { submitQuery, camelKeys, getFirst } = require("~root/lib/database");
+const { submitQuery, camelKeys } = require("~root/lib/database");
 
 const selectUser = ({ email, password }) => submitQuery`
 SELECT 
@@ -12,7 +12,7 @@ town,
 phone_number
     FROM users
     WHERE email = ${email}
-    AND password = ${password};
+    AND password = SHA2(CONCAT(${password}, ${process.env.PASSWORD_SALT}), 224);
 `;
 
-module.exports = getFirst(camelKeys(selectUser));
+module.exports = camelKeys(selectUser);
