@@ -10,9 +10,7 @@ const postUser = async (req, res) => {
     password,
     town,
     city,
-    phoneNumber,
-    userId,
-    userRatingId
+    phoneNumber
   } = req.body;
   try {
     const { user } = await createUser({
@@ -23,9 +21,7 @@ const postUser = async (req, res) => {
       password,
       city,
       town,
-      phoneNumber,
-      userId,
-      userRatingId
+      phoneNumber
     });
 
     res.status(201).send({

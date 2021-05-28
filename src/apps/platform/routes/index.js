@@ -15,13 +15,10 @@ const postProduct = require("../controllers/blogs/postProduct");
 
 const router = express.Router();
 
-// login
-router.post("/login", postLogin);
-
 // products
 router.get("/products", getProducts);
 router.get("/category/:categoryName", getProductsByCategory);
-router.get("/products/:productId", getProductById);
+router.get("/product/:productId", getProductById);
 router.post("/products/list-an-item", authentication, postProduct);
 // categories
 router.get("/categories", getCategories);
@@ -31,6 +28,7 @@ router.get("/users", getUsers);
 
 // user management
 router.post("/register", postUser);
+router.post("/login", postLogin);
 
 // blogs
 router.get("/blogs", getBlogs);

@@ -8,8 +8,7 @@ const createUser = async ({
   password,
   city,
   town,
-  phoneNumber,
-  userRatingId
+  phoneNumber
 }) => {
   const user = await insertUser({
     firstName,
@@ -19,8 +18,7 @@ const createUser = async ({
     password,
     city,
     town,
-    phoneNumber,
-    userRatingId
+    phoneNumber
   });
 
   return { user };

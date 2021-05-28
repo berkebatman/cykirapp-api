@@ -18,11 +18,10 @@ const insertUser = ({
       password,
       city,
       town,
-      phone_number,
-      user_rating_id
+      phone_number
     )
     VALUES 
-    (${firstName},${lastName},${dateOfBirth},${email},SHA2(CONCAT(${password},${process.env.PASSWORD_SALT}), 224),${city},${town},${phoneNumber},NULL)
+    (${firstName},${lastName},${dateOfBirth},${email},SHA2(CONCAT(${password},${process.env.PASSWORD_SALT}), 224),${city},${town},${phoneNumber})
 `;
 
 module.exports = getInsertId(insertUser);

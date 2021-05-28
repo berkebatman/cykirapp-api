@@ -1,27 +1,28 @@
 /* Initialize DB with some seed data */
 USE `kirapp_db`;
 
-INSERT INTO user_ratings (user_rating_id, user_rating)
-VALUES ("1", 2);
-INSERT INTO user_ratings (user_rating_id, user_rating)
-VALUES ("2", 1);
-INSERT INTO user_ratings (user_rating_id, user_rating)
-VALUES ("3", 5);
-INSERT INTO user_ratings (user_rating_id, user_rating)
-VALUES ("4", 4);
-INSERT INTO user_ratings (user_rating_id, user_rating)
-VALUES ("5", 3);
 
-INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number, user_rating_id)
-VALUES ("1","Ahmet", "Akinsql", "2020-11-20", "ahmet@ahmet.com",  SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Lefkosa", "Hamitkoy", 05488888888, 1);
-INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number, user_rating_id)
-VALUES ("2","Cevdet", "Curry" ,"2020-11-20","sefket@google.com", SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Girne", "Alsancak", 05488888888, 2);
-INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number, user_rating_id)
-VALUES ("3","Musdeyde", "Gahpe" ,"2020-11-20","naughty_girlxx@geraholding.com", SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Magusa", "Gulseren", 05488888888, 3);
-INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number, user_rating_id)
-VALUES ("4","Feriha", "Garacocco" ,"2020-11-20","garacoco@gmail.com", SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Omorfo", "Kalkanli", 05488888888, 4);
-INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number, user_rating_id)
-VALUES ("5","Lefkeli", "Ganayakz" ,"2020-11-20","admin@cycodes.com", SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Lefke", "Iskele", 05488888888, 5);
+INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number)
+VALUES ("1","Ahmet", "Akinsql", "2020-11-20", "ahmet@ahmet.com",  SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Lefkosa", "Hamitkoy", 05488888888);
+INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number)
+VALUES ("2","Cevdet", "Curry" ,"2020-11-20","sefket@google.com", SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Girne", "Alsancak", 05488888888);
+INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number)
+VALUES ("3","Musdeyde", "Gahpe" ,"2020-11-20","naughty_girlxx@geraholding.com", SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Magusa", "Gulseren", 05488888888);
+INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number)
+VALUES ("4","Feriha", "Garacocco" ,"2020-11-20","garacoco@gmail.com", SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Omorfo", "Kalkanli", 05488888888);
+INSERT INTO users (user_id, first_name, last_name, date_of_birth, email, password, city, town, phone_number)
+VALUES ("5","Lefkeli", "Ganayakz" ,"2020-11-20","admin@cycodes.com", SHA2(CONCAT("123456","KABLO_SOYMA_MAKINESI"), 224), "Lefke", "Iskele", 05488888888);
+
+INSERT INTO user_ratings (user_rating_id, user_rating, user_id)
+VALUES ("1", 2, 1);
+INSERT INTO user_ratings (user_rating_id, user_rating, user_id)
+VALUES ("2", 1, 2);
+INSERT INTO user_ratings (user_rating_id, user_rating, user_id)
+VALUES ("3", 5, 3);
+INSERT INTO user_ratings (user_rating_id, user_rating, user_id)
+VALUES ("4", 4, 4);
+INSERT INTO user_ratings (user_rating_id, user_rating, user_id)
+VALUES ("5", 3, 5);
 
 INSERT INTO product_categories (category_id, category_name, category_image)
 VALUES ("1", "Musical Instruments", "../assets/images/guitar.svg");

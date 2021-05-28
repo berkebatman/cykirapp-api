@@ -49,15 +49,15 @@ CREATE TABLE users(
     password VARCHAR(500) NOT NULL,
     city VARCHAR(20) NOT NULL,
     town VARCHAR(20) NOT NULL,
-    phone_number VARCHAR(20) NOT NULL,
-    user_rating_id int,
-    FOREIGN KEY (user_rating_id) REFERENCES user_ratings(user_rating_id)
+    phone_number VARCHAR(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS user_ratings;
 CREATE TABLE user_ratings(
     user_rating_id int AUTO_INCREMENT PRIMARY KEY,
-    user_rating int
+    user_rating int,
+    user_id int,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 DROP TABLE IF EXISTS products;

@@ -11,6 +11,7 @@ SELECT
     products.image,
     products.availability,
     products.rating,
+    products.product_description,
     users.first_name,
     users.last_name,
     users.town,
