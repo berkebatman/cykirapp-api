@@ -7,7 +7,8 @@ const insertProduct = ({
   image,
   productCity,
   productTown,
-  userId
+  userId,
+  categoryId
 }) => submitQuery`
     INSERT INTO products (        
       product_name,
@@ -16,10 +17,11 @@ const insertProduct = ({
       image, 
       product_city,
       product_town,
-      user_id
+      user_id,
+      category_id
     )
     VALUES 
-    (${productName},${productDescription},${price},${image},${productCity},${productTown}, ${userId})
+    (${productName},${productDescription},${price},${image},${productCity},${productTown}, ${userId}, ${categoryId})
 `;
 
 module.exports = getInsertId(insertProduct);

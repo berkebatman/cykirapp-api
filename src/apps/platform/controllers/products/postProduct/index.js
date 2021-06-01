@@ -1,4 +1,4 @@
-const createProdcut = require("~root/actions/products/createProduct");
+const createProduct = require("~root/actions/products/createProduct");
 const handleAPIError = require("~root/utils/handleAPIError");
 
 const postProduct = async (req, res) => {
@@ -9,18 +9,20 @@ const postProduct = async (req, res) => {
     image,
     productCity,
     productTown,
-    userId
+    userId,
+    categoryId
   } = req.body;
 
   try {
-    const { product } = await createProdcut({
+    const { product } = await createProduct({
       productName,
       productDescription,
       price,
       image,
       productCity,
       productTown,
-      userId
+      userId,
+      categoryId
     });
     res.send({
       product

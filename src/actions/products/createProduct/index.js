@@ -1,13 +1,14 @@
 const insertProduct = require("./queries/insertProduct.js");
 
-const createProdcut = async ({
+const createProduct = async ({
   productName,
   productDescription,
   price,
   image,
   productCity,
   productTown,
-  userId
+  userId,
+  categoryId
 }) => {
   const product = await insertProduct({
     productName,
@@ -16,10 +17,11 @@ const createProdcut = async ({
     image,
     productCity,
     productTown,
-    userId
+    userId,
+    categoryId
   });
 
   return { product };
 };
 
-module.exports = createProdcut;
+module.exports = createProduct;

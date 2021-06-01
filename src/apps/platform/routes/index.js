@@ -6,12 +6,11 @@ const getProductById = require("../controllers/products/getProductById");
 const getCategories = require("../controllers/categories/getCategories");
 const getUsers = require("../controllers/users/getUsers");
 const postUser = require("../controllers/users/register");
-const getBlogs = require("../controllers/blogs/gelBlogs");
-const postBlog = require("../controllers/blogs/postProduct");
+const getBlogs = require("../controllers/blogs/getBlogs");
 const getBlog = require("../controllers/blogs/getBlog");
 const postLogin = require("../controllers/users/login");
 const authentication = require("../../middlewares/authentication");
-const postProduct = require("../controllers/blogs/postProduct");
+const postProduct = require("../controllers/products/postProduct");
 
 const router = express.Router();
 
@@ -19,7 +18,8 @@ const router = express.Router();
 router.get("/products", getProducts);
 router.get("/category/:categoryName", getProductsByCategory);
 router.get("/product/:productId", getProductById);
-router.post("/products/list-an-item", authentication, postProduct);
+router.post("/products/list-an-item", postProduct);
+
 // categories
 router.get("/categories", getCategories);
 
@@ -32,7 +32,6 @@ router.post("/login", postLogin);
 
 // blogs
 router.get("/blogs", getBlogs);
-router.post("/blog/post", postBlog);
 router.get("/blog/:slug", getBlog);
 
 module.exports = router;
