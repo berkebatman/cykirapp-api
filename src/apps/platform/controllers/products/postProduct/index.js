@@ -13,20 +13,21 @@ const postProduct = async (req, res) => {
     categoryId
   } = req.body;
 
+  console.log(req.file, "<<< file");
+  console.log(req.body);
+
   try {
     const { product } = await createProduct({
       productName,
       productDescription,
       price,
-      image,
+      image: req.file.path,
       productCity,
       productTown,
       userId,
       categoryId
     });
-    res.send({
-      product
-    });
+    res.send({});
   } catch (err) {
     handleAPIError(res, err);
   }

@@ -19,6 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(compression());
 app.use(morgan("combined", { stream: monitoring.stream }));
+app.use("/uploads", express.static("uploads"));
 
 if (process.env.APP_ENVIRONMENT === "PRODUCTION") {
   // 30 requests per minute per IP

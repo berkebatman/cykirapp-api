@@ -1,5 +1,6 @@
 const express = require("express");
-
+const multer = require("multer");
+const path = require("path");
 const getProducts = require("../controllers/products/getProducts");
 const getProductsByCategory = require("../controllers/products/getProductsByCategory");
 const getProductById = require("../controllers/products/getProductById");
@@ -14,11 +15,22 @@ const postProduct = require("../controllers/products/postProduct");
 
 const router = express.Router();
 
+const storage = multer.diskStorage({
+  destination(req, _file, cb) {
+    cb(null, "uploads/");
+  },
+  filename(req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)); // Appending extension
+  }
+});
+
+const upload = multer({ storage });
+
 // products
 router.get("/products", getProducts);
 router.get("/category/:categoryName", getProductsByCategory);
 router.get("/product/:productId", getProductById);
-router.post("/products/list-an-item", postProduct);
+router.post("/products/list-an-item", upload.single("image"), postProduct);
 
 // categories
 router.get("/categories", getCategories);
