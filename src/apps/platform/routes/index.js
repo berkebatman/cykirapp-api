@@ -13,6 +13,8 @@ const postLogin = require("../controllers/users/login");
 const authentication = require("../../middlewares/authentication");
 const postProduct = require("../controllers/products/postProduct");
 const getProductByUserId = require("../controllers/products/getProductByUserId");
+const postOrder = require("../controllers/orders/postOrder");
+const getOrdersByUserId = require("../controllers/orders/getOrdersByUserId");
 
 const router = express.Router();
 
@@ -47,5 +49,9 @@ router.post("/login", postLogin);
 // blogs
 router.get("/blogs", getBlogs);
 router.get("/blog/:slug", getBlog);
+
+// orders
+router.post("/postorder", postOrder);
+router.get("/getordersbyuser", getOrdersByUserId);
 
 module.exports = router;

@@ -102,15 +102,6 @@ CREATE TABLE orders(
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS order_lines;
-CREATE TABLE order_lines(
-	order_line_id int AUTO_INCREMENT PRIMARY KEY,
-    product_id int,
-    order_id int,
-  	FOREIGN KEY (product_id) REFERENCES products(product_id),
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
-
 DROP TABLE IF EXISTS user_payments;
 CREATE TABLE user_payments(
 	user_payments_id int AUTO_INCREMENT PRIMARY KEY,
