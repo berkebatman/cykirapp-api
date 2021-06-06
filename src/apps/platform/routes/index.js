@@ -12,6 +12,7 @@ const getBlog = require("../controllers/blogs/getBlog");
 const postLogin = require("../controllers/users/login");
 const authentication = require("../../middlewares/authentication");
 const postProduct = require("../controllers/products/postProduct");
+const getProductByUserId = require("../controllers/products/getProductByUserId");
 
 const router = express.Router();
 
@@ -31,6 +32,7 @@ router.get("/products", getProducts);
 router.get("/category/:categoryName", getProductsByCategory);
 router.get("/product/:productId", getProductById);
 router.post("/products/list-an-item", upload.single("image"), postProduct);
+router.get("/productbyuser/:userId", getProductByUserId);
 
 // categories
 router.get("/categories", getCategories);
