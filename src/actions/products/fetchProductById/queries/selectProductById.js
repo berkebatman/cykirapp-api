@@ -12,6 +12,8 @@ SELECT
     products.availability,
     products.rating,
     products.product_description,
+    products.product_town, 
+    products.product_city,
     users.first_name,
     users.last_name,
     users.town,

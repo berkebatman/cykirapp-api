@@ -51,7 +51,7 @@ router.get("/blogs", getBlogs);
 router.get("/blog/:slug", getBlog);
 
 // orders
-router.post("/postorder", postOrder);
+router.post("/order", postOrder);
 router.get("/getordersbyuser", getOrdersByUserId);
 
 module.exports = router;
