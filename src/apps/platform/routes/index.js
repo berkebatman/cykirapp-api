@@ -15,6 +15,8 @@ const postProduct = require("../controllers/products/postProduct");
 const getProductByUserId = require("../controllers/products/getProductByUserId");
 const postOrder = require("../controllers/orders/postOrder");
 const getOrdersByUserId = require("../controllers/orders/getOrdersByUserId");
+const getBookedDatesByProductId = require("../controllers/hireCalendar/getBookedDatesByProductId");
+const postBookedDates = require("../controllers/hireCalendar/postBookedDates");
 
 const router = express.Router();
 
@@ -53,5 +55,9 @@ router.get("/blog/:slug", getBlog);
 // orders
 router.post("/order", postOrder);
 router.get("/getordersbyuser", getOrdersByUserId);
+
+// calendars
+router.get("/datesbooked", getBookedDatesByProductId);
+router.post("/bookdates", postBookedDates);
 
 module.exports = router;
