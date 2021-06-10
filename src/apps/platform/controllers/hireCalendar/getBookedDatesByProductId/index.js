@@ -2,14 +2,14 @@ const fetchBookedDatesByProductId = require("~root/actions/hireCalendar/fetchBoo
 const handleAPIError = require("~root/utils/handleAPIError");
 
 const getBookedDatesByProductId = async (req, res) => {
-  const { productId } = req.body;
+  const { productId } = req.params;
 
   try {
-    const { bookedDatesByProductId } = await fetchBookedDatesByProductId({
+    const { bookedDates } = await fetchBookedDatesByProductId({
       productId
     });
     res.send({
-      bookedDatesByProductId
+      bookedDates
     });
   } catch (err) {
     handleAPIError(res, err);

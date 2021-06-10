@@ -57,7 +57,7 @@ router.post("/order", postOrder);
 router.get("/getordersbyuser", getOrdersByUserId);
 
 // calendars
-router.get("/datesbooked", getBookedDatesByProductId);
+router.get("/datesbooked/:productId", getBookedDatesByProductId);
 router.post("/bookdates", postBookedDates);
 
 module.exports = router;
