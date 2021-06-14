@@ -38,6 +38,7 @@ USE `kirapp_db`;
 # DROP TABLE product_ratings;
 # DROP TABLE orders;
 # DROP TABLE order_lines;
+# DROP TABLE product_hire_calendar;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users(
@@ -102,15 +103,6 @@ CREATE TABLE orders(
     FOREIGN KEY (product_id) REFERENCES products(product_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-DROP TABLE IF EXISTS order_lines;
-CREATE TABLE order_lines(
-	order_line_id int AUTO_INCREMENT PRIMARY KEY,
-    product_id int,
-    order_id int,
-  	FOREIGN KEY (product_id) REFERENCES products(product_id),
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
-
 DROP TABLE IF EXISTS user_payments;
 CREATE TABLE user_payments(
 	user_payments_id int AUTO_INCREMENT PRIMARY KEY,
@@ -134,4 +126,28 @@ CREATE TABLE blogs(
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     published_at DATETIME,
     FOREIGN KEY (user_id) REFERENCES users (user_id)
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS blogs;
+CREATE TABLE blogs(
+    blog_id INT AUTO_INCREMENT PRIMARY KEY, 
+    user_id int NOT NULL, 
+    `description` VARCHAR(300),
+    `image`  VARCHAR(250),
+    slug VARCHAR(100) NOT NULL, 
+    title VARCHAR(200) NOT NULL,
+    blog_content LONGTEXT,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    published_at DATETIME,
+    FOREIGN KEY (user_id) REFERENCES users (user_id)
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS product_hire_calendar;
+CREATE TABLE product_hire_calendar(
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    user_id int NOT NULL, 
+    product_id int NOT NULL,
+    date_booked date,
+    FOREIGN KEY (user_id) REFERENCES users (user_id),
+    FOREIGN KEY (product_id) REFERENCES products (product_id)
 )  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;

@@ -96,17 +96,6 @@ VALUES ("7", 3, 7);
 INSERT INTO orders (order_id, user_id, product_id)
 VALUES ("8", 1, 8);
 
-INSERT INTO order_lines (order_line_id, product_id, order_id)
-VALUES ("1", 1, 1);
-INSERT INTO order_lines (order_line_id, product_id, order_id)
-VALUES ("2", 1, 2);
-INSERT INTO order_lines (order_line_id, product_id, order_id)
-VALUES ("3", 2, 6);
-INSERT INTO order_lines (order_line_id, product_id, order_id)
-VALUES ("4", 2, 4);
-INSERT INTO order_lines (order_line_id, product_id, order_id)
-VALUES ("5", 5, 2);
-
 INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
 VALUES (1, "The perception of space and how people can adopt a life in outerspace ","to-brighter-futures", "To Brigther Futures", "1Content goes here, if you are interested you will need to sort out the markdown render:p", "2021-04-02 09:00:00");
 INSERT INTO blogs(user_id, `description`, slug, title, blog_content,published_at) 
