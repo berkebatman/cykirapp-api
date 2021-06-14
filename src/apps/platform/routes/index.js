@@ -53,8 +53,8 @@ router.get("/blogs", getBlogs);
 router.get("/blog/:slug", getBlog);
 
 // orders
+router.get("/myorders/:userId", getOrdersByUserId);
 router.post("/order", postOrder);
-router.get("/getordersbyuser", getOrdersByUserId);
 
 // calendars
 router.get("/datesbooked/:productId", getBookedDatesByProductId);

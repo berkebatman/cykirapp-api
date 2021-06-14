@@ -9,7 +9,6 @@ SELECT
     products.product_id,
     products.product_name,
     products.price,
-    products.user_id,
     products.listed_at,
     products.image,
     products.availability,
